@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <nav class="navbar">
+        <ul>
+            <li><a href="#experience">My Experience</a></li>
+            <li><a href="#skills">My Skills</a></li>
+        </ul>
+    </nav>
+    <img class=spiderman src="img/spiderman.gif" alt="">
+    <img class="mario" src="img/mario.gif" alt="img" />
+<section>
+    <div class="header-left-side">
+        <h1 class="Name">
+            <br>
+            Syed Shad Nabi <br />
+        </h1>
+        <h2>- B.Tech CSE Student</h2>
+        <div class="context">
+            <p>
+              Hey there!
+              I'm a B.Tech Computer Science student with a burning curiosity for all things Tech, Automobiles, Movies and <a href="https://music.youtube.com/watch?v=T2sTvN4Tob8" target="_blank">Music</a>. From programming languages to algorithms, I thrive on the challenges and opportunities presented by the ever-evolving world of computer science. When not doing that, I had probably be found stalking the Automobile Industry, listening to some old bolly music or browsing out the OG movies. Currently, immersed in my studies at UPES, Dehardun.<br>
+
+              ✨Let's connect and explore the endless possibilities of technology together!✨
+            </p> 
+    </div>
+        <button ng-click="openLink('https://www.linkedin.com/in/syed-shad-nabi-77a6a525a/')">Linkedin</button>
+        <button ng-click="openLink('https://www.instagram.com/syed_shad_nabi/')">Instagram</button>
+        <br />
+        <br>
+        <button ng-click="openForm()">Shoot me a message</button>
+        <button ng-click="openLink('https://github.com/Shad0321')">GitHub</button>
+        <br />
+        <br>
+    </div>
+    <div class="header-right-side">
+    </div>
+</section>
+<section id="experience">
+    <div class="header-left-side">
+        <h1>
+            My Experience <br />
+        </h1>
+        <div class="context">
+        <p>
+            On the 29th and 30th of October, 2023, I had the incredible opportunity to participate in the HARD-WAR 2.0 Hackathon. Alongside my talented team the "ALCHEMISTS", we embarked on a journey to create something innovative and impactful.
+
+            Our project, "Personalized Itinerary Planning," aimed to revolutionize the way people plan their travels, offering tailor-made itineraries to suit individual preferences. As a team, we divided our responsibilities, and I delved into the frontend development and website design aspects of our project.
+            
+            The 30-hour hackathon tested our skills, teamwork, and creativity. In the initial round, we pitched our concept to the judges, showcasing our vision and strategy. Advancing to the next round, we presented our first draft of the frontend website, receiving positive feedback and encouragement.
+            
+            Despite the challenges and time constraints, we persevered and delved into refining our project further, particularly focusing on the database implementation. While we were unable to progress beyond the third round, the journey itself was immensely rewarding, filled with learning experiences and camaraderie.
+        </p>
+    </div>
+</section>
+<section class="skills-section" id="skills">
+    <div class="header-left-side" >
+        <h1 class="skills-text">
+            My Skills
+        </h1>
+        <p>I possess a diverse range of programming skills, including proficiency in C/C++, HTML/CSS, JavaScript, Java and Python. With experience across multiple languages and technologies. I am adept at building web applications, crafting responsive user interfaces, and implementing robust backend systems. Whether it's front-end development with HTML/CSS and JavaScript or backend development with Java or Python, I bring a versatile skill set to any project, ensuring efficient and effective solutions from conception to deployment.
+        </p>
+    </div>
+</section>
+<section></section>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function($scope, $window) {
+    $scope.openLink = function(url) {
+        $window.open(url, '_blank');
+    }
+    $scope.openForm = function() {
+        window.open('form.html', '_blank');
+    }
+});
+</script>
+<style>
+    .mario {
+        position: absolute;
+        top: 57%; 
+        left: 40px;
+        width: 200px;
+        height: auto;
+        animation: marioRun 6s linear infinite;
+    }
+    @keyframes marioRun {
+        0% {
+            transform: translateX(-100%);
+        
+        }
+        100% {
+            transform: translateX(800%);
+        }
+      }
+</style>
+</body>
+</html>
